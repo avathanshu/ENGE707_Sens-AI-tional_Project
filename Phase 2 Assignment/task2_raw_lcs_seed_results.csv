@@ -1,0 +1,11 @@
+seed,model,accuracy
+0,"Original eLCS (raw, all 40 numeric-encoded columns)",0.3452
+1,"Original eLCS (raw, all 40 numeric-encoded columns)",0.4544
+2,"Original eLCS (raw, all 40 numeric-encoded columns)",0.4274
+3,"Original eLCS (raw, all 40 numeric-encoded columns)",0.3436
+4,"Original eLCS (raw, all 40 numeric-encoded columns)",0.3526
+5,"Original eLCS (raw, all 40 numeric-encoded columns)",0.45
+6,"Original eLCS (raw, all 40 numeric-encoded columns)",0.37
+7,"Original eLCS (raw, all 40 numeric-encoded columns)",0.4634
+8,"Original eLCS (raw, all 40 numeric-encoded columns)",0.3586
+9,"Original eLCS (raw, all 40 numeric-encoded columns)",0.3508
