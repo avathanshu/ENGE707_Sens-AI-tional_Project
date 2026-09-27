@@ -1,0 +1,60 @@
+Raw dataset shape: (150000, 43)
+productivity_class
+1    50031
+0    50023
+2    49946
+Name: count, dtype: int64
+X shape: (150000, 7) | y shape: (150000,)
+Random Forest settings: n_estimators=100, max_depth=12
+Seed 0: accuracy = 0.6378
+Seed 1: accuracy = 0.6164
+Seed 2: accuracy = 0.6288
+Seed 3: accuracy = 0.6238
+Seed 4: accuracy = 0.6230
+Seed 5: accuracy = 0.6192
+Seed 6: accuracy = 0.6226
+Seed 7: accuracy = 0.6432
+Seed 8: accuracy = 0.6276
+Seed 9: accuracy = 0.6170
+
+Random Forest -- mean accuracy over 10 seeds: 0.6259 (std 0.0083)
+Compare this against the raw eLCS baseline and improved eLCS mean accuracies for the Task 6 table.
+
+Pooled confusion matrix across all 10 seeds (rows = actual, columns = predicted):
+[[11668  4240   650]
+ [ 4482  8116  4231]
+ [  691  4409 11513]]
+
+Classification report (pooled across all seeds):
+              precision    recall  f1-score   support
+
+         Low       0.69      0.70      0.70     16558
+      Medium       0.48      0.48      0.48     16829
+        High       0.70      0.69      0.70     16613
+
+    accuracy                           0.63     50000
+   macro avg       0.63      0.63      0.63     50000
+weighted avg       0.63      0.63      0.63     50000
+
+
+Per-class TP / TN / FP / FN (one-vs-rest):
+  Low    : TP=11668  TN=28269  FP= 5173  FN= 4890  -> means, for 'Low' vs. everything else: 11668 correctly flagged as Low, 28269 correctly flagged as NOT Low, 5173 wrongly flagged as Low, 4890 Low cases the model missed.
+  Medium : TP= 8116  TN=24522  FP= 8649  FN= 8713  -> means, for 'Medium' vs. everything else: 8116 correctly flagged as Medium, 24522 correctly flagged as NOT Medium, 8649 wrongly flagged as Medium, 8713 Medium cases the model missed.
+  High   : TP=11513  TN=28506  FP= 4881  FN= 5100  -> means, for 'High' vs. everything else: 11513 correctly flagged as High, 28506 correctly flagged as NOT High, 4881 wrongly flagged as High, 5100 High cases the model missed.
+
+Feature importances (from the final seed's trained forest):
+             feature  importance
+   ai_maturity_score    0.341365
+    ai_adoption_rate    0.212242
+   ai_training_hours    0.138825
+task_automation_rate    0.127325
+     ai_failure_rate    0.115019
+   ai_adoption_stage    0.047231
+            industry    0.017994
+
+Saved feature importances to task6_random_forest_feature_importances.csv
+
+Saved per-seed results to task6_random_forest_seed_results.csv and summary to task6_random_forest_results.csv
+                                 model  mean_accuracy  std_accuracy  n_seeds  n_features n_rules_last_seed
+0  Random Forest (7 selected features)        0.62594      0.008308       10           7              None
+PS C:\Users\OEM\Desktop\Software engineering degree\Year 2\Semester 2\Data and A.i engineering\Phase 2 Assignment> 
