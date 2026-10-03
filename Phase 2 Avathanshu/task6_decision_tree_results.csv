@@ -1,0 +1,2 @@
+model,mean_accuracy,std_accuracy,n_seeds,n_features,n_rules_last_seed
+Decision Tree (7 selected features),0.62274,0.00897197860006367,10,7,

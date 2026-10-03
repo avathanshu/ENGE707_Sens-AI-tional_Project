@@ -1,0 +1,11 @@
+seed,model,accuracy
+0,"Original eLCS (preprocessed, all cleaned features)",0.5938
+1,"Original eLCS (preprocessed, all cleaned features)",0.4932
+2,"Original eLCS (preprocessed, all cleaned features)",0.3462
+3,"Original eLCS (preprocessed, all cleaned features)",0.4686
+4,"Original eLCS (preprocessed, all cleaned features)",0.4892
+5,"Original eLCS (preprocessed, all cleaned features)",0.5352
+6,"Original eLCS (preprocessed, all cleaned features)",0.3416
+7,"Original eLCS (preprocessed, all cleaned features)",0.4766
+8,"Original eLCS (preprocessed, all cleaned features)",0.5018
+9,"Original eLCS (preprocessed, all cleaned features)",0.3878

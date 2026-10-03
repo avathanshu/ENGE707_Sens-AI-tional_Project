@@ -1,0 +1,4 @@
+,mean,std
+Decision Tree (7 selected features),0.62274,0.009457295831496704
+"Improved eLCS (feature selection, 7 features)",0.58836,0.012383070881023207
+"Original eLCS (preprocessed, all cleaned features)",0.46340000000000003,0.08142846895008868
