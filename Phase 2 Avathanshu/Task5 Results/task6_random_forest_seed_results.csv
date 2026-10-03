@@ -1,0 +1,11 @@
+seed,model,accuracy
+0,Random Forest (7 selected features),0.6378
+1,Random Forest (7 selected features),0.6164
+2,Random Forest (7 selected features),0.6288
+3,Random Forest (7 selected features),0.6238
+4,Random Forest (7 selected features),0.623
+5,Random Forest (7 selected features),0.6192
+6,Random Forest (7 selected features),0.6226
+7,Random Forest (7 selected features),0.6432
+8,Random Forest (7 selected features),0.6276
+9,Random Forest (7 selected features),0.617

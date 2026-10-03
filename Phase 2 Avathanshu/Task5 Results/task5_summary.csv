@@ -1,0 +1,7 @@
+model,mean,std
+Logistic Regression (7 selected features),0.6290966666,0.0018580122777305899
+Random Forest (7 selected features),0.62594,0.008757498374409098
+Decision Tree (7 selected features),0.62274,0.009457295831496704
+Improved eLCS (7 selected features),0.58774,0.012900318686847325
+"Original eLCS (preprocessed, ~29 columns, leakage & outliers handled)",0.46340000000000003,0.08142846895008868
+"Original eLCS (raw, all 40 numeric-encoded columns)",0.3916,0.050540896531642794

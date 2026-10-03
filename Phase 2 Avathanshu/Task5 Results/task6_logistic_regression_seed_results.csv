@@ -1,0 +1,11 @@
+seed,model,accuracy
+0,Logistic Regression (7 selected features),0.6297
+1,Logistic Regression (7 selected features),0.627066667
+2,Logistic Regression (7 selected features),0.630833333
+3,Logistic Regression (7 selected features),0.6302
+4,Logistic Regression (7 selected features),0.626966667
+5,Logistic Regression (7 selected features),0.6296
+6,Logistic Regression (7 selected features),0.629533333
+7,Logistic Regression (7 selected features),0.629333333
+8,Logistic Regression (7 selected features),0.6318
+9,Logistic Regression (7 selected features),0.625933333

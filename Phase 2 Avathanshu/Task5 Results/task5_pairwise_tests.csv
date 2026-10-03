@@ -1,0 +1,16 @@
+model_a,model_b,mean_diff,ttest_p,wilcoxon_p,ttest_p_holm,wilcoxon_p_holm,significant_holm_0.05
+Decision Tree (7 selected features),Improved eLCS (7 selected features),0.03500000000000001,1.9432983600570123e-05,0.001953125,0.0001748968524051311,0.029296875,True
+Decision Tree (7 selected features),Logistic Regression (7 selected features),-0.006356666600000016,0.04779231542110135,0.083984375,0.12615650717351803,0.16796875,False
+Decision Tree (7 selected features),"Original eLCS (preprocessed, ~29 columns, leakage & outliers handled)",0.15933999999999998,0.00011740708377143046,0.001953125,0.0009297087771118646,0.029296875,True
+Decision Tree (7 selected features),"Original eLCS (raw, all 40 numeric-encoded columns)",0.23113999999999998,1.1181329808030544e-07,0.001953125,1.6771994712045816e-06,0.029296875,True
+Decision Tree (7 selected features),Random Forest (7 selected features),-0.0032000000000000028,0.027483195276842422,0.048828125,0.10993278110736969,0.1484375,False
+Improved eLCS (7 selected features),Logistic Regression (7 selected features),-0.04135666660000002,4.7924517361359646e-06,0.001953125,4.792451736135964e-05,0.029296875,True
+Improved eLCS (7 selected features),"Original eLCS (preprocessed, ~29 columns, leakage & outliers handled)",0.12434,0.0007253362169925381,0.001953125,0.0036266810849626906,0.029296875,True
+Improved eLCS (7 selected features),"Original eLCS (raw, all 40 numeric-encoded columns)",0.19614,1.7783139926011002e-06,0.001953125,2.13397679112132e-05,0.029296875,True
+Improved eLCS (7 selected features),Random Forest (7 selected features),-0.03820000000000001,4.310668022413169e-06,0.001953125,4.741734824654485e-05,0.029296875,True
+Logistic Regression (7 selected features),"Original eLCS (preprocessed, ~29 columns, leakage & outliers handled)",0.1656966666,0.00011906210132239007,0.001953125,0.0009297087771118646,0.029296875,True
+Logistic Regression (7 selected features),"Original eLCS (raw, all 40 numeric-encoded columns)",0.23749666660000002,1.2247808740264796e-07,0.001953125,1.7146932236370714e-06,0.029296875,True
+Logistic Regression (7 selected features),Random Forest (7 selected features),0.003156666600000013,0.24755718870204296,0.275390625,0.24755718870204296,0.275390625,False
+"Original eLCS (preprocessed, ~29 columns, leakage & outliers handled)","Original eLCS (raw, all 40 numeric-encoded columns)",0.0718,0.042052169057839345,0.037109375,0.12615650717351803,0.1484375,False
+"Original eLCS (preprocessed, ~29 columns, leakage & outliers handled)",Random Forest (7 selected features),-0.16254,0.00011621359713898307,0.001953125,0.0009297087771118646,0.029296875,True
+"Original eLCS (raw, all 40 numeric-encoded columns)",Random Forest (7 selected features),-0.23434,1.3472675583627708e-07,0.001953125,1.751447825871602e-06,0.029296875,True

@@ -1,0 +1,29 @@
+Models found: ['Decision Tree (7 selected features)', 'Improved eLCS (7 selected features)', 'Logistic Regression (7 selected features)', 'Original eLCS (preprocessed, ~29 columns, leakage & outliers handled)', 'Original eLCS (raw, all 40 numeric-encoded columns)', 'Random Forest (7 selected features)'] | seeds: 10
+
+Mean accuracy over seeds:
+                                                       mean     std
+model
+Logistic Regression (7 selected features)           0.6291  0.0019
+Random Forest (7 selected features)                 0.6259  0.0088
+Decision Tree (7 selected features)                 0.6227  0.0095
+Improved eLCS (7 selected features)                 0.5877  0.0129
+Original eLCS (preprocessed, ~29 columns, leaka...  0.4634  0.0814
+Original eLCS (raw, all 40 numeric-encoded colu...  0.3916  0.0505
+
+Pairwise paired tests:
+                                                               model_a                                                               model_b  mean_diff  ttest_p  wilcoxon_p  ttest_p_holm  wilcoxon_p_holm  significant_holm_0.05
+                                  Decision Tree (7 selected features)                                   Improved eLCS (7 selected features)    0.03500  0.00002     0.00195       0.00017          0.02930                   True
+                                  Decision Tree (7 selected features)                             Logistic Regression (7 selected features)   -0.00636  0.04779     0.08398       0.12616          0.16797                  False
+                                  Decision Tree (7 selected features) Original eLCS (preprocessed, ~29 columns, leakage & outliers handled)    0.15934  0.00012     0.00195       0.00093          0.02930                   True
+                                  Decision Tree (7 selected features)                   Original eLCS (raw, all 40 numeric-encoded columns)    0.23114  0.00000     0.00195       0.00000          0.02930                   True
+                                  Decision Tree (7 selected features)                                   Random Forest (7 selected features)   -0.00320  0.02748     0.04883       0.10993          0.14844                  False
+                                  Improved eLCS (7 selected features)                             Logistic Regression (7 selected features)   -0.04136  0.00000     0.00195       0.00005          0.02930                   True
+                                  Improved eLCS (7 selected features) Original eLCS (preprocessed, ~29 columns, leakage & outliers handled)    0.12434  0.00073     0.00195       0.00363          0.02930                   True
+                                  Improved eLCS (7 selected features)                   Original eLCS (raw, all 40 numeric-encoded columns)    0.19614  0.00000     0.00195       0.00002          0.02930                   True
+                                  Improved eLCS (7 selected features)                                   Random Forest (7 selected features)   -0.03820  0.00000     0.00195       0.00005          0.02930                   True
+                            Logistic Regression (7 selected features) Original eLCS (preprocessed, ~29 columns, leakage & outliers handled)    0.16570  0.00012     0.00195       0.00093          0.02930                   True
+                            Logistic Regression (7 selected features)                   Original eLCS (raw, all 40 numeric-encoded columns)    0.23750  0.00000     0.00195       0.00000          0.02930                   True
+                            Logistic Regression (7 selected features)                                   Random Forest (7 selected features)    0.00316  0.24756     0.27539       0.24756          0.27539                  False
+Original eLCS (preprocessed, ~29 columns, leakage & outliers handled)                   Original eLCS (raw, all 40 numeric-encoded columns)    0.07180  0.04205     0.03711       0.12616          0.14844                  False
+Original eLCS (preprocessed, ~29 columns, leakage & outliers handled)                                   Random Forest (7 selected features)   -0.16254  0.00012     0.00195       0.00093          0.02930                   True
+                  Original eLCS (raw, all 40 numeric-encoded columns)                                   Random Forest (7 selected features)   -0.23434  0.00000     0.00195       0.00000          0.02930                   True
