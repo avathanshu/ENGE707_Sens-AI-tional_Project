@@ -1,0 +1,2 @@
+model,mean_accuracy,std_accuracy,n_seeds,n_features,n_rules_last_seed
+"Original eLCS (preprocessed, all cleaned features)",0.46340000000000003,0.07724982847877399,10,30,1396

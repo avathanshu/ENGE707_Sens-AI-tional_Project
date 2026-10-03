@@ -1,0 +1,11 @@
+seed,model,accuracy
+0,"Improved eLCS (feature selection, 7 features)",0.6124
+1,"Improved eLCS (feature selection, 7 features)",0.576
+2,"Improved eLCS (feature selection, 7 features)",0.5792
+3,"Improved eLCS (feature selection, 7 features)",0.5806
+4,"Improved eLCS (feature selection, 7 features)",0.5944
+5,"Improved eLCS (feature selection, 7 features)",0.5716
+6,"Improved eLCS (feature selection, 7 features)",0.5994
+7,"Improved eLCS (feature selection, 7 features)",0.596
+8,"Improved eLCS (feature selection, 7 features)",0.5884
+9,"Improved eLCS (feature selection, 7 features)",0.5856

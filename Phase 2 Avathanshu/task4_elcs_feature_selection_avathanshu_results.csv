@@ -1,0 +1,2 @@
+model,mean_accuracy,std_accuracy,n_seeds,n_features,n_rules_last_seed
+"Improved eLCS (feature selection, 7 features)",0.58836,0.011747612523402378,10,7,1121

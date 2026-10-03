@@ -1,0 +1,11 @@
+seed,model,accuracy
+0,Decision Tree (7 selected features),0.6356
+1,Decision Tree (7 selected features),0.6142
+2,Decision Tree (7 selected features),0.6246
+3,Decision Tree (7 selected features),0.6144
+4,Decision Tree (7 selected features),0.622
+5,Decision Tree (7 selected features),0.6238
+6,Decision Tree (7 selected features),0.6204
+7,Decision Tree (7 selected features),0.6398
+8,Decision Tree (7 selected features),0.6238
+9,Decision Tree (7 selected features),0.6088

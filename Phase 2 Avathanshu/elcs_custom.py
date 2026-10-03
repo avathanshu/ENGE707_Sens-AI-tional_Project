@@ -6,6 +6,9 @@ prediction) is the ORIGINAL code, unchanged. Removed as irrelevant to this proje
 tracking, population reboot/pickling, parameter-validation boilerplate, debug printing, roulette selection,
 CSV iteration export, attribute-specificity/accuracy reports and the data-cleanup helpers.
 Everything is in this one file, so no skeLCS package or GitHub copy is needed.
+
+The improved system in this project is FEATURE SELECTION (see SELECTED_FEATURE_COLUMNS below), not a change to the
+algorithm: eLCS itself is identical for every run and only the columns it is given differ.
 """
 import csv
 import copy
@@ -27,11 +30,30 @@ POPULATION_SIZE_N = round(1.5 * TRAIN_SUBSAMPLE_SIZE)   # N ~ 1.5x training inst
 LEARNING_ITERATIONS = 5 * TRAIN_SUBSAMPLE_SIZE    # same iteration budget for original and improved eLCS
 MAX_DEPTH = 8                                     # Decision Tree depth cap
 
+# -----------------------------------------------------------------------------
+# Feature preprocessing / feature selection (Task 3 and the Task 4 improved system)
+# -----------------------------------------------------------------------------
+# Identifiers, plus the column the class label was cut from -- never usable as predictors.
+ID_AND_TARGET_COLUMNS = ["response_id", "company_id", "productivity_change_percent", "productivity_class"]
+# "AI paid off" outcome measures: the same kind of quantity as the target, so keeping them would leak the answer.
+OUTCOME_FAMILY_COLUMNS = [
+    "revenue_growth_percent", "cost_reduction_percent", "customer_satisfaction", "time_saved_per_week",
+    "employee_satisfaction_score", "jobs_created", "jobs_displaced", "reskilled_employees",
+    "remote_work_percentage", "innovation_score",
+]
+# Core numeric predictors that are winsorised (capped at their IQR fences) during preprocessing.
+NUMERIC_COLUMNS_TO_CAP = [
+    "ai_adoption_rate", "ai_maturity_score", "ai_failure_rate", "ai_training_hours", "task_automation_rate",
+]
+# The curated feature subset kept by the improved eLCS (5 numeric + 1 ordinal + 1 nominal = 7 columns).
+SELECTED_FEATURE_COLUMNS = NUMERIC_COLUMNS_TO_CAP + ["ai_adoption_stage", "industry"]
+STAGE_ORDER = {"none": 0, "pilot": 1, "partial": 2, "full": 3}   # ai_adoption_stage is ordinal
 
-def make_elcs(seed, subsumption=False):
-    """Project eLCS: original settings, optionally with correct-set subsumption (the 'improved' system)."""
-    return eLCS(learning_iterations=LEARNING_ITERATIONS, N=POPULATION_SIZE_N,
-                random_state=seed, do_correct_set_subsumption=subsumption)
+
+def make_elcs(seed):
+    """Project eLCS: unmodified algorithm and original settings. The original and the improved system share
+    this factory; they differ only in the feature matrix the notebook passes to fit()."""
+    return eLCS(learning_iterations=LEARNING_ITERATIONS, N=POPULATION_SIZE_N, random_state=seed)
 
 
 def make_decision_tree(seed):

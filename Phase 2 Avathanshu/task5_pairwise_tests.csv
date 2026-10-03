@@ -1,0 +1,4 @@
+model_a,model_b,mean_diff,ttest_p,wilcoxon_p,ttest_p_holm,wilcoxon_p_holm,significant_holm_0.05
+"Original eLCS (preprocessed, all cleaned features)","Improved eLCS (feature selection, 7 features)",-0.12496,0.0008036846643247464,0.001953125,0.0008036846643247464,0.005859375,True
+"Original eLCS (preprocessed, all cleaned features)",Decision Tree (7 selected features),-0.15933999999999998,0.00011740708377143041,0.001953125,0.00023481416754286082,0.005859375,True
+"Improved eLCS (feature selection, 7 features)",Decision Tree (7 selected features),-0.03437999999999999,2.9869394837175156e-06,0.001953125,8.960818451152546e-06,0.005859375,True
